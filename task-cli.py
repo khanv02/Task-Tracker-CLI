@@ -68,7 +68,8 @@ def list_task(args, tasks):
             print("The list is empty")
     else:
         print("There is no type of list you're looking for")   
-        
+
+"""Cập nhật task(Mô tả)"""
 def update_task(args, tasks):
     if len(args) < 4: # Nếu sau id không có gì thì báo lỗi
         print("Error: Please provide a task description")
@@ -91,6 +92,7 @@ def update_task(args, tasks):
         save_tasks(tasks)                     
         print("Update successfully")
 
+"""Xóa task"""
 def delete_task(args, tasks):
     if len(tasks) == 0: # Không có gì để xóa
         print("Error: Nothing to delete")
@@ -116,7 +118,8 @@ def delete_task(args, tasks):
             task["id"] = id + 1; id += 1 
         print("Delete successfully")
         save_tasks(tasks)
-
+        
+"""Cập nhật trạng thái của task"""
 def mark_task(args, tasks, command):
     if len(args) < 3:
         print("Error: Please provide a description")
@@ -141,11 +144,12 @@ def mark_task(args, tasks, command):
         print("Successfully Mark")
         save_tasks(tasks)
         return
-
+        
+"""Hàm main chạy"""
 def main():
     args = sys.argv # Lấy lệnh từ terminal ("Task-cli.py", "add", "Học Python")
     if len(args) < 2: # Nếu len < 2 có nghĩa là người dùng không nhập gì sau lệnh add 
-        print("Usage: python task_tracker.py [add|list|update|delete|mark-done|mark-progress]")
+        print("Usage: python task_tracker.py [add|list|update|delete|mark-done|mark-in-progres|mark-todo|clear]")
         return 
     
     command = args[1] # Lấy lệnh người dùng (add, list, delete...)
@@ -175,3 +179,4 @@ if __name__ == "__main__": # Hàm test
     main()
     
     
+
