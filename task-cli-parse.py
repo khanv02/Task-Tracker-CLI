@@ -141,7 +141,6 @@ if __name__ == "__main__":
 """ 
 [------------------{GUIDE}--------------------]
 # Adding a new task
-
 task-cli-parse add --desc "Buy groceries"
 # Output: Added task #{id}: {description}
 
@@ -152,6 +151,7 @@ task-cli delete --id 1
 # Marking a task as in progress or done
 task-cli mark --status in-progress --id 1
 task-cli mark --stauts done --id 1
+
 # Listing all tasks
 task-cli list
 
@@ -162,3 +162,4 @@ task-cli list --status in-progress
 [------------------{THANK YOU}--------------------]
 
 """ 
+
