@@ -1,5 +1,4 @@
 import json
-import sys
 import os
 import argparse
 from datetime import datetime
@@ -161,4 +160,5 @@ task-cli list --status done
 task-cli list --status todo
 task-cli list --status in-progress
 [------------------{THANK YOU}--------------------]
+
 """ 
